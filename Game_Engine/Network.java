@@ -7,7 +7,8 @@ public class Network {
 
 
     //int x, y;
-    double[][]graph;
+    Road[][]graph;
+    Intersection[][]inter_graph;
     public Network(){
         Read_Graph();
         display();
@@ -23,10 +24,10 @@ public class Network {
         // For each road, change color depending on capacity.
         for (int x = 0; x < graph.length; x++) {
             for (int y = 0; y < graph[x].length; y++) {
-               if (graph[x][y]==0){
+               if (graph[x][y].capacity==0){
                     System.out.print("■");
                }
-               if (graph[x][y]>0){
+               if (graph[x][y].capacity>0){
                 System.out.print(" ");
            }
             }
@@ -48,7 +49,7 @@ public class Network {
                             {true,true,true,true,true,true,true,true,true,true}
                             };
     }*/
-    graph = new double[][] {{0,10,0,10,0,10,0,10,0,10,0},
+    /*graph = new double[][] {{0,10,0,10,0,10,0,10,0,10,0},
                             {10,10,10,10,10,10,10,10,10,10},
                             {0,10,0,10,0,10,0,10,0,10,0},
                             {10,10,10,10,10,10,10,10,10,10},
@@ -58,8 +59,22 @@ public class Network {
                             {10,10,10,10,10,10,10,10,10,10},
                             {0,10,0,10,0,10,0,10,0,10,0},
                             {10,10,10,10,10,10,10,10,10,10}
-                            };
+                            };*/
+    graph = new Road[10][10];
+    for (int x = 0; x < graph.length; x++) {
+        for (int y = 0; y < graph[x].length; y++) {
+           if((x%2==0)&&(y%2==0)){
+                graph[x][y] = new Road();
+                graph[x][y].capacity = 0;
+           }
+           else{
+            graph[x][y] = new Road();
+            graph[x][y].capacity = 10;
+           }
+        }
+     }
 
+     inter_graph = new Intersection{{}}
 
-}
+    }
 }
