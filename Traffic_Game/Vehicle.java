@@ -2,9 +2,14 @@ package Traffic_Game;
 
 public class Vehicle {
 
+    public int size;
+
+    public Vehicle (int size) {
+        this.size = size;
+    }
+
     private double speed;
     public double damage;
-    public int size;
 
     public double getSpeed() {
         return speed;

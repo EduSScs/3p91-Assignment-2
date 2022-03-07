@@ -1,24 +1,25 @@
 package Game_Engine;
+import java.util.*;
 
 public class Intersection {
 
+    public Intersection(double x, double y) {
+        this.x = x;
+        this.y = y;
 
-    boolean [] directions = new boolean[3]; // Can you turn left, right, not turn..\
-    double x;
-    double y;
+    }
+    // create an intersection with x and y coordinates
+    private double x;
+    private double y;
 
-    // Network class should be able to create a intersection at specific cords.
-
-    public boolean[] getDirections() {
-        return directions;
+    // getters and setters
+    public double getX() {
+        return x;
+    }
+    public double getY() {
+        return y;
     }
 
-    // Get coordinates of this intersection
-    public double[] getCoords() {
-        double[] coords= new double[1];
-        coords[0] = x;
-        coords[1] = y;
-        return coords;
-    }
+
 
 }

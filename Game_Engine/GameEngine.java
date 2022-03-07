@@ -12,7 +12,7 @@ public class GameEngine {
         points -= p;
     }
     private void advance() {
-        time ++;
+        time++;
     }
 
     public int getTime() {
