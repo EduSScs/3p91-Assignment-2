@@ -74,7 +74,7 @@ public class Network {
         }
      }
 
-     inter_graph = new Intersection{{}}
+     //inter_graph = new Intersection{{}}
 
     }
 }
