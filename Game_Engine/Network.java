@@ -80,7 +80,7 @@ public class Network {
         // for every road in the network, remove the first vehicle from the road and add it to the next road
     }
 
-    public void dispaly() {
+    public void display() {
         // write the current capacity of each road to the console
         for (Road r : roads) {
             System.out.println(r.getCapacity());
